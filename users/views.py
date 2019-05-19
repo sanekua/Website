@@ -12,6 +12,6 @@ def register(request):
             messages.success(request,f'Account created for {username}!')
             return redirect('web-home')
     else:
-        form = UserCreationForm()
+        form = UserRegisterForm()
     return render(request,'users/register.html', {'form':form})
 
